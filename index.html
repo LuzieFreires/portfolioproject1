@@ -1,60 +1,91 @@
+<!DOCTYPE html>
+
 <html>
-    <body>
-        <header>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
             <title>UI/UX Portfolio Website</title>
-            <link rel="stylesheet" href="styles.css">
-            <h1>Welcome to My Website</h1>
-        </header>
+    </head>
+    <body>
+        <main>
+            <div class="container">
+                <header class="header">
+                    <h1>Welcome to My Portfolio Website</h1>
+                    <nav>
+                        <ul>
+                            <li><a href="#home">Home</a></li>
+                            <li><a href="#about">About Me</a></li>
+                            <li><a href="#experience">Experience</a></li>
+                            <li><a href="#portfolio">Portfolio</a></li>
+                            <li><a href="#contact">Contact Me</a></li>
+                            <li><a href="#forms">Contact Form</a></li>
+                        </ul>
+                    </nav>
+                </header>
+            </div>
 
-        <section id="home">
-            <h2>Home</h2>
-            <p>This is the home section of my portfolio website.</p>    
+            <section id="home" class="home-section">
+                <h2>Home</h2>
+                <p>This is the home section of my portfolio website.</p>    
+                    <div class="flex-container">
+                        <div class="flex-item">
+                            <img src="path/to/luzie-image.jpg" alt="Image">
+                            <h3>lUZIE</h3>
+                        </div>
+                        <div class="flex-item">
+                            <h2>UI/UX Designer</h3>
+                            <p>ui/ux designer does user Experience</p>
+                        </div>
+                      
 
-        <section id="about">
-            <h2>About Me</h2>
-            <p>Hello! </p>   
+            <section id="about">
+                <h2>About Me</h2>
+                <p> lorem ipsum </p>
+                <button class="resume">Resume</button>
 
-        </section>
-
-        </section id="services">
-            <h2>My Services</h2>
-            <ul>
-                <li>Service 1: Description of service 1.</li>
-                <li>Service 2: Description of service 2.</li>
-                <li>Service 3: Description of service 3.</li>
-            </ul>   
-
-        <section id="projects">
-            <h2>My Projects</h2>
-            <ul>
-                <li>Project 1: Description of project 1.</li>
-                <li>Project 2: Description of project 2.</li>
-                <li>Project 3: Description of project 3.</li>
-            </ul>   
-        </section>
+            </section>
 
 
-        <section id="contact">
-            <h2>Contact Me</h2>
-            <p>You can reach me at:     
-        </section>
+            </section id="Experience">
+                <h2>Experience</h2>
+                <ul>
+                    <li>Service 1: Description of service 1.</li>
+                    <li>Service 2: Description of service 2.</li>
+                    <li>Service 3: Description of service 3.</li>
+                </ul>   
 
-        <section id="forms">
-            <h2>Contact Form</h2>
-            <form action="submit_form.php" method="post">
-                <label for="name">Name:</label><br>
-                <input type="text" id="name" name="name" required><br>
-                <label for="email">Email:</label><br>
-                <input type="email" id="email" name="email" required><br>
-                <label for="message">Message:</label><br>
-                <textarea id="message" name="message" required></textarea><br>
-                <input type="submit" value="Submit">
-            </form>
-        </section>
+            <section id="Portfolio">
+                <h2>pORTFOLIO</h2>
+                <ul>
+                    <li>Project 1: Description of project 1.</li>
+                    <li>Project 2: Description of project 2.</li>
+                    <li>Project 3: Description of project 3.</li>
+                </ul>   
+            </section>
+
+
+            <section id="contact">
+                <h2>Contact Me</h2>
+                <p>You can reach me at:     
+            </section>
+
+            <section id="forms">
+                <h2>Contact Form</h2>
+                <form action="submit_form.php" method="post">
+                    <label for="name">Name:</label><br>
+                    <input type="text" id="name" name="name" required><br>
+                    <label for="email">Email:</label><br>
+                    <input type="email" id="email" name="email" required><br>
+                    <label for="message">Message:</label><br>
+                    <textarea id="message" name="message" required></textarea><br>
+                    <input type="submit" value="Submit">
+                </form>
+            </section>
 
         <footer>
 
             <p>&copy; 2024 My Website. All rights reserved.</p>
         </footer>
+        </main>
     </body>
 </html>
