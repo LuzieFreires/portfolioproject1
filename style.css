@@ -1,0 +1,412 @@
+/* === GENERAL STYLES === */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+  scroll-behavior: smooth;
+}
+
+:root {
+  --primary-pink: #f4b6c2;
+  --accent-rose: #f76b8a;
+  --soft-cream: #fff7f8;
+  --text-dark: #333;
+  --text-light: #555;
+  --shadow: rgba(0, 0, 0, 0.1);
+}
+
+/* === BODY LAYOUT === */
+body {
+  background-color: var(--soft-cream);
+  color: var(--text-dark);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+main.container {
+  width: 100%;
+  max-width: 1200px;
+  padding: 20px;
+}
+
+/* === HEADER === */
+header {
+  width: 100%;
+  background: white;
+  box-shadow: 0 2px 8px var(--shadow);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.nav-bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 30px;
+}
+
+.logo {
+  color: var(--accent-rose);
+  font-weight: 600;
+}
+
+.nav-links {
+  display: flex;
+  gap: 20px;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: var(--text-dark);
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+  color: var(--accent-rose);
+}
+
+/* === HERO SECTION === */
+.home {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  padding: 80px 20px;
+  background: linear-gradient(135deg, var(--primary-pink), #ffe5ec);
+  border-radius: 20px;
+  margin-top: 30px;
+  color: #fff;
+  text-align: left;
+}
+
+.hero-content {
+  flex: 1;
+  min-width: 280px;
+  padding: 20px;
+  animation: fadeIn 1.5s ease;
+}
+
+.hero-content h2 {
+  font-size: 2rem;
+  margin-bottom: 10px;
+}
+
+.hero-content .highlight {
+  color: #fff;
+  font-weight: 600;
+}
+
+.hero-content p {
+  margin-bottom: 20px;
+  color: #f9f9f9;
+  line-height: 1.6;
+}
+
+.hero-buttons {
+  display: flex;
+  gap: 15px;
+}
+
+.btn, .btn-outline {
+  padding: 10px 20px;
+  border-radius: 25px;
+  text-decoration: none;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+.btn {
+  background-color: #fff;
+  color: var(--accent-rose);
+}
+
+.btn-outline {
+  border: 2px solid #fff;
+  color: #fff;
+}
+
+.btn:hover {
+  background-color: var(--accent-rose);
+  color: #fff;
+}
+
+.btn-outline:hover {
+  background-color: #fff;
+  color: var(--accent-rose);
+}
+
+.hero-image img {
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
+  object-fit: cover;
+  box-shadow: 0 8px 20px var(--shadow);
+  animation: float 4s ease-in-out infinite;
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+}
+
+/* === ABOUT SECTION === */
+.about {
+  margin: 60px 0;
+  padding: 20px;
+  text-align: center;
+}
+
+.about h2 {
+  color: var(--accent-rose);
+  margin-bottom: 20px;
+}
+
+.about p {
+  line-height: 1.7;
+  color: var(--text-light);
+  margin-bottom: 15px;
+}
+
+.about .btn {
+  display: inline-block;
+  margin-top: 10px;
+}
+
+/* === SKILLS SECTION === */
+.skills {
+  margin: 60px 0;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 15px;
+  box-shadow: 0 4px 12px var(--shadow);
+}
+
+.skills h2 {
+  text-align: center;
+  color: var(--accent-rose);
+  margin-bottom: 20px;
+}
+
+.skills ul {
+  list-style-type: none;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+
+.skills li {
+  background: var(--soft-cream);
+  padding: 10px 20px;
+  border-radius: 20px;
+  box-shadow: 0 2px 6px var(--shadow);
+}
+
+/* === PROJECTS SECTION === */
+.projects {
+  margin: 60px 0;
+  text-align: center;
+}
+
+.projects h2 {
+  color: var(--accent-rose);
+  margin-bottom: 20px;
+}
+
+.projects-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}
+
+.project {
+  background: #fff;
+  border-radius: 15px;
+  box-shadow: 0 4px 12px var(--shadow);
+  width: 320px;
+  padding: 20px;
+  transition: transform 0.3s ease;
+}
+
+.project:hover {
+  transform: translateY(-5px);
+}
+
+.project img {
+  width: 100%;
+  border-radius: 10px;
+  margin-bottom: 10px;
+}
+
+.project h3 {
+  color: var(--accent-rose);
+  margin-bottom: 8px;
+}
+
+.project p {
+  color: var(--text-light);
+  font-size: 0.95rem;
+}
+
+/* === CONTACT SECTION === */
+.contact {
+  background-color: white;
+  padding: 40px;
+  border-radius: 20px;
+  box-shadow: 0 4px 12px var(--shadow);
+  margin-bottom: 60px;
+  text-align: center;
+}
+
+.contact h2 {
+  color: var(--accent-rose);
+  margin-bottom: 15px;
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+label {
+  font-weight: 500;
+  margin-bottom: 5px;
+}
+
+input, textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  resize: none;
+}
+
+button {
+  background-color: var(--accent-rose);
+  color: white;
+  border: none;
+  padding: 12px;
+  border-radius: 25px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+button:hover {
+  background-color: #e2557d;
+}
+
+
+/* ===== Footer Section ===== */
+footer {
+  background-color: #f7e8ef; /* soft mauve-pink background */
+  color: #4a3f42; /* muted warm brown text for contrast */
+  text-align: center;
+  padding: 2rem 1rem;
+  margin-top: 5rem;
+  border-top: 1px solid #e3c9d3; /* gentle border for polish */
+}
+
+.footer-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+
+/* Social links layout */
+.social-links {
+  display: flex;
+  justify-content: center;
+  gap: 1.8rem;
+}
+
+/* Icon styling */
+.social-links img {
+  width: 30px;
+  height: 30px;
+  transition: transform 0.3s ease, opacity 0.3s ease, filter 0.3s ease;
+}
+
+/* Hover animation */
+.social-links img:hover {
+  transform: scale(1.2);
+  opacity: 1;
+  filter: drop-shadow(0 0 6px #ffb6c1);
+}
+
+
+/* === ANIMATIONS === */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(30px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* === SCROLL ANIMATION BASE === */
+.reveal {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: all 0.8s ease;
+}
+
+.reveal.active {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+
+/* === RESPONSIVE DESIGN === */
+@media (max-width: 900px) {
+  .home {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .hero-content, .hero-image {
+    text-align: center;
+  }
+
+  .hero-image img {
+    margin-top: 20px;
+  }
+
+  .nav-links {
+    gap: 10px;
+  }
+}
+
+@media (max-width: 600px) {
+  .nav-bar {
+    flex-direction: column;
+  }
+
+  .nav-links {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .projects-grid {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .project {
+    width: 90%;
+  }
+}
+
+

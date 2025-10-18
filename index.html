@@ -1,91 +1,142 @@
 <!DOCTYPE html>
-
 <html>
     <head>
         <meta charset="UTF-8">
+        <meta name="description" content="UI/UX Portfolio Website">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-            <title>UI/UX Portfolio Website</title>
+        <meta http-equiv="refresh" content="30">
+        <title>UI/UX Portfolio Website</title>
+        <link rel="stylesheet" href="style.css">
+        <script src="script.js"></script>
     </head>
+
+
     <body>
-        <main>
-            <div class="container">
+        <main class="container">
                 <header class="header">
-                    <h1>Welcome to My Portfolio Website</h1>
-                    <nav>
-                        <ul>
-                            <li><a href="#home">Home</a></li>
-                            <li><a href="#about">About Me</a></li>
-                            <li><a href="#experience">Experience</a></li>
-                            <li><a href="#portfolio">Portfolio</a></li>
-                            <li><a href="#contact">Contact Me</a></li>
-                            <li><a href="#forms">Contact Form</a></li>
-                        </ul>
+                    <nav class="nav-bar">
+                        <h1 class="logo">Portfolio Website</h1>
+                        <ul class="nav-links">
+                            <a href="#home">Home</a>
+                            <a href="#about">About</a>
+                            <a href="#skills">Skills</a>
+                            <a href="#projects">Projects</a>
+                            <a href="#contact">Contact</a>
                     </nav>
                 </header>
-            </div>
 
-            <section id="home" class="home-section">
-                <h2>Home</h2>
-                <p>This is the home section of my portfolio website.</p>    
-                    <div class="flex-container">
-                        <div class="flex-item">
-                            <img src="path/to/luzie-image.jpg" alt="Image">
-                            <h3>lUZIE</h3>
-                        </div>
-                        <div class="flex-item">
-                            <h2>UI/UX Designer</h3>
-                            <p>ui/ux designer does user Experience</p>
-                        </div>
+            <section id="home" class="home reveal">
+                <div class="hero-content">
+                    <h2>Hello, I’m <span class="highlight">Luzie Ann Freires</span></h2>
+                    <p>I design with purpose — creating interfaces that feel natural, elegant, and truly human.</p>
+                    <div class="hero-buttons">
+                        <a href="#projects" class="btn">My Work</a>
+                        <a href="#contact" class="btn-outline">Contact Me</a>
+                    </div>
+                </div>
+
+                <div class="hero-image">
+                    <img src="images/luzie-image.jpg" alt="profile"/>
+                </div>  
+            </section>
                       
 
-            <section id="about">
-                <h2>About Me</h2>
-                <p> lorem ipsum </p>
-                <button class="resume">Resume</button>
-
+            <section id="about" class="about reveal">
+                <h2>About</h2>
+                    <p>I’m <strong>Luzie Ann Freires</strong>, a UI/UX designer driven by curiosity, empathy, and a love for clean, meaningful design.
+                        My creative process blends artistry and logic — transforming ideas into experiences that connect people and technology.
+                    </p>
+                    <p>
+                        I believe that every detail matters — from color harmony and typography to the way a button feels when clicked.
+                        My goal is simple: to design with grace, purpose, and a touch of charm.
+                    </p>
+                    <a href="Luzie-Freires-Resume.pdf" class="btn">Resume</a>
             </section>
 
 
-            </section id="Experience">
-                <h2>Experience</h2>
+            <section id="skills" class="skills reveal">
+                <h2>Skills</h2>
                 <ul>
-                    <li>Service 1: Description of service 1.</li>
-                    <li>Service 2: Description of service 2.</li>
-                    <li>Service 3: Description of service 3.</li>
+                    <li>UI/UX Design – User-centered, accessible interfaces</li>
+                    <li>Wireframing & Prototyping – Figma, Adobe XD</li>
+                    <li>Front-End – HTML, CSS (Flexbox), JavaScript</li>
+                    <li>Responsive Design & Visual Systems</li>
                 </ul>   
 
-            <section id="Portfolio">
-                <h2>pORTFOLIO</h2>
-                <ul>
-                    <li>Project 1: Description of project 1.</li>
-                    <li>Project 2: Description of project 2.</li>
-                    <li>Project 3: Description of project 3.</li>
-                </ul>   
+            <section id="projects" class="projects  reveal">
+                <h2>Featured Projects</h2>
+                <div class="projects-grid">
+
+                    <div class="project">
+                    <img src="images/aurora-travel-dashboard.jpg" alt="Aurora Travel Dashboard">
+                    <h3>Aurora Travel Dashboard</h3>
+                    <p>A modern travel booking interface designed to simplify trip planning. 
+                    The design focuses on intuitive navigation, calming color palettes, and 
+                    smart search interactions to create a seamless user experience.</p>
+                    </div>
+
+                    <div class="project">
+                    <img src="images/natura-ecommerce-app.jpg" alt="Natura E-commerce App">
+                    <h3>Natura E-Commerce App</h3>
+                    <p>An eco-conscious shopping platform emphasizing product storytelling 
+                    through clean UI and emotional visuals. The mobile-first design enhances 
+                    accessibility and encourages mindful shopping behaviors.</p>
+                    </div>
+
+                    <div class="project">
+                    <img src="images/loopmind-productivity-tool.jpg" alt="LoopMind Productivity Tool">
+                    <h3>LoopMind Productivity Tool</h3>
+                    <p>A productivity dashboard for creative teams. The interface balances 
+                    minimalism and analytics, with user-tested layouts that reduce friction 
+                    and help teams focus on deep work.</p>
+                    </div>
+
+                </div>
             </section>
 
+            <section id="contact" class="contact reveal">
+                <h2>Get in Touch</h2>
+                <p>Have a project in mind or want to collaborate? Let’s connect.</p>
 
-            <section id="contact">
-                <h2>Contact Me</h2>
-                <p>You can reach me at:     
-            </section>
+                <form class="contact-form" action="#" method="post">
+                    <div class="form-group">
+                    <label for="name">Full Name</label>
+                    <input type="text" id="name" name="name" placeholder="Enter your full name" required>
+                    </div>
 
-            <section id="forms">
-                <h2>Contact Form</h2>
-                <form action="submit_form.php" method="post">
-                    <label for="name">Name:</label><br>
-                    <input type="text" id="name" name="name" required><br>
-                    <label for="email">Email:</label><br>
-                    <input type="email" id="email" name="email" required><br>
-                    <label for="message">Message:</label><br>
-                    <textarea id="message" name="message" required></textarea><br>
-                    <input type="submit" value="Submit">
+                    <div class="form-group">
+                    <label for="email">Email Address</label>
+                    <input type="email" id="email" name="email" placeholder="Enter your email" required>
+                    </div>
+
+                    <div class="form-group">
+                    <label for="message">Message</label>
+                    <textarea id="message" name="message" placeholder="Write your message..." required></textarea>
+                    </div>
+
+                    <button type="submit">Send Message</button>
                 </form>
-            </section>
+                </section>
 
         <footer>
+            <p>&copy; 2025 My Website. All rights reserved.</p>
+            <div class="footer-content">
+                <p>Connect with me on social media:</p>
 
-            <p>&copy; 2024 My Website. All rights reserved.</p>
+                <div class="social-links">
+                <a href="https://www.behance.net" target="_blank" title="Behance">
+                    <img src="images/icon-behance.svg" alt="Behance icon">
+                </a>
+                <a href="https://dribbble.com" target="_blank" title="Dribbble">
+                    <img src="images/icon-dribbble.svg" alt="Dribbble icon">
+                </a>
+                <a href="https://www.linkedin.com" target="_blank" title="LinkedIn">
+                    <img src="images/icon-linkedin.svg" alt="LinkedIn icon">
+                </a>
+                </div>
+            </div>
         </footer>
+
         </main>
     </body>
 </html>
