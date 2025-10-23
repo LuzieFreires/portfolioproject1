@@ -1,6 +1,3 @@
-// === SCROLL REVEAL ANIMATION ===
-
-// === MODAL POPUP FUNCTIONALITY ===
 window.addEventListener("DOMContentLoaded", function() {
   // Get modal elements
   const modal = document.getElementById("project-modal");
