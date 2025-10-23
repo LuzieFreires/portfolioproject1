@@ -15,7 +15,7 @@
         <main class="container">
                 <header class="header">
                     <nav class="nav-bar">
-                        <h1 class="logo">Portfolio Website</h1>
+                        <h1 class="logo">Portfolio</h1>
                         <ul class="nav-links">
                             <a href="#home">Home</a>
                             <a href="#about">About</a>
@@ -36,7 +36,7 @@
                 </div>
 
                 <div class="hero-image">
-                    <img src="images/luzie-image.jpg" alt="profile"/>
+                    <img src="images/profile picture.jpg" alt="profile"/>
                 </div>  
             </section>
                       
@@ -68,33 +68,39 @@
                 <div class="projects-grid">
 
                     <div class="project">
-                    <img src="images/aurora-travel-dashboard.jpg" alt="Aurora Travel Dashboard">
-                    <h3>Aurora Travel Dashboard</h3>
-                    <p>A modern travel booking interface designed to simplify trip planning. 
-                    The design focuses on intuitive navigation, calming color palettes, and 
-                    smart search interactions to create a seamless user experience.</p>
+                    <img src="images/travel.webp" alt="Travel Dashboard">
+                    <h3>Expinova Travel Dashboard</h3>
+                    <p>A modern travel management dashboard designed to make trip organization effortless. 
+                        The layout emphasizes intuitive navigation, 
+                        a clean visual hierarchy, and a consistent color scheme to ensure a smooth 
+                        and efficient user experience.</p>
                     </div>
 
                     <div class="project">
-                    <img src="images/natura-ecommerce-app.jpg" alt="Natura E-commerce App">
-                    <h3>Natura E-Commerce App</h3>
-                    <p>An eco-conscious shopping platform emphasizing product storytelling 
-                    through clean UI and emotional visuals. The mobile-first design enhances 
-                    accessibility and encourages mindful shopping behaviors.</p>
+                    <img src="images/ecommerce.webp" alt="E-commerce App">
+                    <h3>COMM-SIL Minimal Ecommerce Product List Exploration</h3>
+                    <p>A minimal e-commerce interface designed to enhance product exploration and discovery.
+                        This layout focuses on clarity and ease of navigation, 
+                        allowing users to browse effortlessly through categories and filters.
+                        With its clean structure, subtle color palette, 
+                        and intuitive design elements, it offers a seamless 
+                         elegant online shopping experience.</p>
                     </div>
 
                     <div class="project">
-                    <img src="images/loopmind-productivity-tool.jpg" alt="LoopMind Productivity Tool">
-                    <h3>LoopMind Productivity Tool</h3>
-                    <p>A productivity dashboard for creative teams. The interface balances 
-                    minimalism and analytics, with user-tested layouts that reduce friction 
-                    and help teams focus on deep work.</p>
+                    <img src="images/mentalmeditation.webp" alt="mental meditation">
+                    <h3> Mental Health Meditation App </h3>
+                    <p>A modern mental health and meditation app designed 
+                        to promote mindfulness and emotional well-being. 
+                        The interface features a calm and balanced aesthetic, 
+                        combining warm tones and soft typography for a soothing experience. 
+                        With intuitive navigation and personalized insights, 
+                        users can easily track their mood, listen to guided meditations,
+                        and build healthier mental habits through daily reflection.</p>
                     </div>
-
-                </div>
             </section>
 
-            <section id="contact" class="contact reveal">
+      <section id="contact" class="contact reveal">
                 <h2>Get in Touch</h2>
                 <p>Have a project in mind or want to collaborate? Let’s connect.</p>
 
@@ -119,23 +125,37 @@
                 </section>
 
         <footer>
-            <p>&copy; 2025 My Website. All rights reserved.</p>
-            <div class="footer-content">
-                <p>Connect with me on social media:</p>
+            <div class="footer-container">
+                <div class="footer-content">
+                    <p>&copy; 2025 My Website. All rights reserved.</p>
+                    <p>Connect with me on social media:</p>
 
-                <div class="social-links">
-                <a href="https://www.behance.net" target="_blank" title="Behance">
-                    <img src="images/icon-behance.svg" alt="Behance icon">
-                </a>
-                <a href="https://dribbble.com" target="_blank" title="Dribbble">
-                    <img src="images/icon-dribbble.svg" alt="Dribbble icon">
-                </a>
-                <a href="https://www.linkedin.com" target="_blank" title="LinkedIn">
-                    <img src="images/icon-linkedin.svg" alt="LinkedIn icon">
-                </a>
+                    <div class="social-links">
+                    <a href="https://www.facebook.com/luziefreires04/" target="_blank" title="Facebook">
+                        <img src="images/facebook.png" alt="Facebook icon">
+                    </a>
+                    <a href="https://github.com/LuzieFreires" target="_blank" title="Github">
+                        <img src="images/github-sign.png" alt="Github icon">
+                    </a>
+                    <a href="https://www.linkedin.com/in/luzie-freires" target="_blank" title="LinkedIn">
+                        <img src="images/linkedin.png"  alt="LinkedIn icon">
+                    </a>
+                    </div>
+                </div>
+                
                 </div>
             </div>
         </footer>
+
+         <div id="project-modal" class="modal">
+            <div class="modal-overlay"></div>
+            <div class="modal-content">
+                <button class="modal-close">&times;</button>
+                <img id="modal-img" src="" alt="Project Image">
+                <h3 id="modal-title"></h3>
+                <p id="modal-desc"></p>
+            </div>
+        </div>
 
         </main>
     </body>
