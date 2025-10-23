@@ -228,6 +228,19 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
     
+    // Contact form redirect to home
+    const contactForm = document.querySelector('.contact-form');
+    if (contactForm) {
+        contactForm.addEventListener('submit', function(e) {
+            e.preventDefault();
+            window.location.hash = 'home';
+            const homeSection = document.getElementById('home');
+            if (homeSection) {
+                homeSection.scrollIntoView({ behavior: 'smooth' });
+            }
+        });
+    }
+
     // Skill progress animation
     const skillBars = document.querySelectorAll('.skill-progress');
     
