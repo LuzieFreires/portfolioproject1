@@ -206,3 +206,27 @@ document.addEventListener("DOMContentLoaded", () => {
     e.stopPropagation();
   });
 });
+
+// Skill bar animation
+document.addEventListener("DOMContentLoaded", () => {
+  const skillBars = document.querySelectorAll('.skill-progress');
+  
+  const animateSkillBars = () => {
+    skillBars.forEach(bar => {
+      const rect = bar.getBoundingClientRect();
+      const isVisible = rect.top < window.innerHeight && rect.bottom > 0;
+      
+      if (isVisible && !bar.classList.contains('animated')) {
+        const width = bar.getAttribute('data-width');
+        bar.style.width = width;
+        bar.classList.add('animated');
+      }
+    });
+  };
+  
+  // Initial check
+  animateSkillBars();
+  
+  // Check on scroll
+  window.addEventListener('scroll', animateSkillBars);
+});
