@@ -207,26 +207,45 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 });
 
-// Skill bar animation
-document.addEventListener("DOMContentLoaded", () => {
-  const skillBars = document.querySelectorAll('.skill-progress');
-  
-  const animateSkillBars = () => {
-    skillBars.forEach(bar => {
-      const rect = bar.getBoundingClientRect();
-      const isVisible = rect.top < window.innerHeight && rect.bottom > 0;
-      
-      if (isVisible && !bar.classList.contains('animated')) {
-        const width = bar.getAttribute('data-width');
-        bar.style.width = width;
-        bar.classList.add('animated');
-      }
-    });
-  };
-  
-  // Initial check
-  animateSkillBars();
-  
-  // Check on scroll
-  window.addEventListener('scroll', animateSkillBars);
+document.addEventListener('DOMContentLoaded', function() {
+    // Mobile menu toggle
+    const mobileMenu = document.getElementById('mobile-menu');
+    const navMenu = document.getElementById('nav-menu');
+    
+    if (mobileMenu) {
+        mobileMenu.addEventListener('click', function() {
+            navMenu.classList.toggle('active');
+            mobileMenu.classList.toggle('active');
+        });
+        
+        // Close menu when clicking on links
+        const navLinks = document.querySelectorAll('.nav-links a');
+        navLinks.forEach(link => {
+            link.addEventListener('click', function() {
+                navMenu.classList.remove('active');
+                mobileMenu.classList.remove('active');
+            });
+        });
+    }
+    
+    // Skill progress animation
+    const skillBars = document.querySelectorAll('.skill-progress');
+    
+    // Initial check on page load
+    checkSkillBars();
+    
+    // Check on scroll
+    window.addEventListener('scroll', checkSkillBars);
+    
+    function checkSkillBars() {
+        skillBars.forEach(bar => {
+            const barPosition = bar.getBoundingClientRect().top;
+            const screenPosition = window.innerHeight / 1.3;
+            
+            if (barPosition < screenPosition) {
+                const dataProgress = bar.getAttribute('data-progress');
+                bar.style.width = dataProgress + '%';
+            }
+        });
+    }
 });
