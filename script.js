@@ -63,16 +63,18 @@ window.addEventListener("DOMContentLoaded", function() {
   // Function to open the modal
   function openModal() {
     modal.classList.add("active");
-    document.body.style.overflow = "hidden"; // Prevent scrolling when modal is open
+    document.body.style.overflow = "hidden";
   }
   
   // Function to close the modal
   function closeModal() {
     modal.classList.remove("active");
     modal.style.display = "none";
-    document.body.style.overflow = ""; // Restore scrolling
+    document.body.style.overflow = ""; 
   }
 });
+
+
 window.addEventListener("scroll", () => {
   document.querySelectorAll(".reveal").forEach((el) => {
     const elementTop = el.getBoundingClientRect().top;
@@ -163,14 +165,12 @@ document.addEventListener("DOMContentLoaded", () => {
   };
 
   // ---------- Attach click handlers to project cards ----------
-  // Supports both existing .project nodes and future ones (delegation fallback)
+
   const projectsContainer = document.querySelector(".projects-grid") || document;
   projectsContainer.addEventListener("click", (e) => {
-    // Find the nearest .project ancestor (handles clicking on children)
     const card = e.target.closest(".project");
     if (!card) return;
 
-    // Prevent opening if the click target is the modal itself or a link you don't want
     if (card.closest("#project-modal")) return;
 
     const imgEl = card.querySelector("img");
@@ -185,7 +185,6 @@ document.addEventListener("DOMContentLoaded", () => {
     openModal();
   });
 
-  // ---------- Close controls ----------
   closeBtn.addEventListener("click", (e) => {
     e.stopPropagation();
     closeModal();
@@ -193,12 +192,10 @@ document.addEventListener("DOMContentLoaded", () => {
 
   overlay.addEventListener("click", () => closeModal());
 
-  // Close on Escape key
   window.addEventListener("keydown", (e) => {
     if (e.key === "Escape" && modal.classList.contains("show")) closeModal();
   });
 
-  // Prevent clicks inside modal-content from closing (if overlay click area)
   modal.querySelector(".modal-content").addEventListener("click", (e) => {
     e.stopPropagation();
   });

@@ -25,7 +25,7 @@ main.container {
   max-width: 1200px;
   padding: 10px;
   margin: 0 auto;
-  padding-top: 80px; /* Added to account for fixed navbar */
+  padding-top: 80px;
 }
 
 /* === HEADER === */
@@ -337,7 +337,6 @@ header {
   margin-top: 10px;
 }
 
-/* === SKILLS SECTION === */
 /* === SECTION TITLES === */
 .section-title {
   text-align: center;
@@ -663,9 +662,8 @@ button {
 }
 
 .back-to-top:hover {
-  background: var(--accent-pink);
+  background: var(--light-green);
 }
-
 
 /* === FOOTER === */
 footer {
@@ -821,7 +819,6 @@ footer::before {
 }
 
 
-
 /* === ANIMATIONS === */
 @keyframes fadeIn {
   from { opacity: 0; transform: translateY(30px); }
@@ -923,7 +920,6 @@ footer::before {
   will-change: transform;
 }
 
-/* nice responsive image and spacing */
 .modal-content img {
   width: 100%;
   height: auto;
@@ -942,7 +938,6 @@ footer::before {
   line-height: 1.6;
 }
 
-/* close button */
 .modal-close {
   position: absolute;
   top: 12px;
@@ -967,7 +962,6 @@ footer::before {
   to { transform: scale(1); opacity: 1; }
 }
 
-/* prevent page scroll when modal open */
 body.modal-open {
   overflow: hidden;
 }
